@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/currencyconventer/static/css/main.3d3b1197.chunk.css",
+    "main.js": "/currencyconventer/static/js/main.4f046f37.chunk.js",
+    "main.js.map": "/currencyconventer/static/js/main.4f046f37.chunk.js.map",
+    "runtime-main.js": "/currencyconventer/static/js/runtime-main.07989bd5.js",
+    "runtime-main.js.map": "/currencyconventer/static/js/runtime-main.07989bd5.js.map",
+    "static/css/2.17e5ed98.chunk.css": "/currencyconventer/static/css/2.17e5ed98.chunk.css",
+    "static/js/2.b8b8e7da.chunk.js": "/currencyconventer/static/js/2.b8b8e7da.chunk.js",
+    "static/js/2.b8b8e7da.chunk.js.map": "/currencyconventer/static/js/2.b8b8e7da.chunk.js.map",
+    "index.html": "/currencyconventer/index.html",
+    "precache-manifest.794259c56d18a5d89a348f67c57db982.js": "/currencyconventer/precache-manifest.794259c56d18a5d89a348f67c57db982.js",
+    "service-worker.js": "/currencyconventer/service-worker.js",
+    "static/css/2.17e5ed98.chunk.css.map": "/currencyconventer/static/css/2.17e5ed98.chunk.css.map",
+    "static/css/main.3d3b1197.chunk.css.map": "/currencyconventer/static/css/main.3d3b1197.chunk.css.map",
+    "static/js/2.b8b8e7da.chunk.js.LICENSE": "/currencyconventer/static/js/2.b8b8e7da.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.07989bd5.js",
+    "static/css/2.17e5ed98.chunk.css",
+    "static/js/2.b8b8e7da.chunk.js",
+    "static/css/main.3d3b1197.chunk.css",
+    "static/js/main.4f046f37.chunk.js"
+  ]
+}
