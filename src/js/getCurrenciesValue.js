@@ -24,6 +24,10 @@ fetch('http://192.168.1.173:8080/api/convert/all')
     })
     .catch((error) => {
         //no connection to api
-        
+        ReactDOM.render(
+            <>
+                <h1 className="mx-auto mt-5">API is not responding</h1>
+            </>
+            , document.getElementById('currenciesList'));
     });
 
