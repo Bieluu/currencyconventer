@@ -13,7 +13,6 @@ body{
     margin-left: 0!important;
     margin-right: 0!important;
 }
-
 .nav-link.active{
     -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.75);
     -moz-box-shadow:    0 0 10px 0 rgba(0, 0, 0, 0.75);
@@ -32,9 +31,6 @@ body{
 -moz-box-shadow:    0 0 20px 0 rgba(0, 0, 0, 0.75);
 box-shadow:         0 0 20px 0 rgba(0, 0, 0, 0.75);
 }
-.maincontentheight{
-    height: calc(100vh - 165px);
-}
 input{
     height:75px!important;
     font-size:25px!important;
@@ -52,9 +48,6 @@ input{
     }
 }
 @media (max-width: 280px){
-    .maincontentheight{
-        height: calc(100vh - 200px);
-    }
     h2{
         font-size: 18px!important;
     }
