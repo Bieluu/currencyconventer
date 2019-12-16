@@ -17,23 +17,29 @@ export default () => {
                                 <div className="input-group">
                                     <input id="amount" type="text" className="form-control text-white bg-black"/>
                                     <div className="input-group-append">
-                                        <button className="btn btn-outline-secondary bg-black dropdown-toggle" type="button" id="pickFstCur">USD</button>
+                                        <button className="btn btn-outline-secondary bg-black dropdown-toggle"
+                                        type="button" id="pickFstCur" value="USD" data-toggle="modal" data-target="#setCurModal1">
+                                            USD
+                                        </button>
                                     </div>
                                 </div>
-
                             </div>
 
                             <div className="col-md-1 my-auto"><h3>₮o</h3></div>
 
                             <div className="col-md-4">
                                 <div className="input-group">
-                                    <input type="text" className="form-control text-white bg-black" />
+                                    <input type="text" className="form-control text-white bg-black" id="result" disabled />
                                     <div className="input-group-append">
-                                        <button className="btn btn-outline-secondary bg-black dropdown-toggle" type="button" id="pickSndCur">USD</button>
+                                        <button className="btn btn-outline-secondary bg-black dropdown-toggle"
+                                        type="button" id="pickSndCur" value="USD" data-toggle="modal" data-target="#setCurModal2">
+                                            USD
+                                        </button>
                                     </div>
                                 </div>
 
                             </div>
+                            <div id="currencyListModal"></div>
                         </div>
 
 

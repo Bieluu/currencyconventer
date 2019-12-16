@@ -7,8 +7,9 @@ import * as serviceWorker from './serviceWorker';
 import 'jquery/src/jquery';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
-import '../src/js/getCurrenciesValue.js'
+import calculate from './js/getCurrenciesValue.js'
 import $ from 'jquery'; 
+
 ReactDOM.render(
     <div>
     <Navbar />
@@ -19,8 +20,8 @@ ReactDOM.render(
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
-
+serviceWorker.register();
+    
 $('#amount').on('input', function() {
-    console.log("change");
+    calculate();
 });

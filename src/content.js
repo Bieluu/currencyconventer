@@ -11,7 +11,7 @@ export default () => {
                             <a className="nav-link active" id="pills-calc-tab" data-toggle="pill" href="#pills-calc" role="tab" aria-controls="pills-calc" aria-selected="true"><h3>Exchange calculator</h3></a>
                         </li>
                         <li className="nav-item mx-auto">
-                            <a className="nav-link" id="pills-rates-tab" data-toggle="pill" href="#pills-rates" role="tab" aria-controls="pills-rates" aria-selected="false"><h3>Exchange rates</h3></a>
+                            <a className="nav-link" id="pills-rates-tab" data-toggle="pill" href="#pills-rates" role="tab" aria-controls="pills-rates" aria-selected="false"><h3>Exchange rate$</h3></a>
                         </li>
                     </ul>
                 </div>

@@ -1,7 +1,28 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import $ from 'jquery';
 
-fetch('http://192.168.1.173:8080/api/convert/all')
+function calculate(){
+    let amount = $('#amount').val();
+    let firstCurrency = $('#pickFstCur').val();
+    let secondCurrency = $('#pickSndCur').val();
+    fetch(`http://192.168.1.173:8080/api/convert/${amount}/${firstCurrency}/${secondCurrency}`)
+    .then((response) => response.json())
+    .then((responseJson) => {
+        $("#result").val(responseJson.result);
+    })
+    .catch((error) => {
+        //no connection to api
+        ReactDOM.render(
+            <>
+                <h1 className="mx-auto mt-5">API is not responding</h1>
+            </>
+            , document.getElementById('pills-calc'));
+            console.log(error);
+    });
+}
+
+fetch(`http://192.168.1.173:8080/api/convert/all`)
     .then((response) => response.json())
     .then((responseJson) => {
         ReactDOM.render(
@@ -21,6 +42,33 @@ fetch('http://192.168.1.173:8080/api/convert/all')
                 )}
             </>
             , document.getElementById('currenciesList'));
+
+        ReactDOM.render(
+            <>
+                <div id="setCurModal1" className="modal fade" role="dialog">
+                    <div className="modal-dialog modal-dialog-centered">
+
+                        <div className="modal-content bg-black">
+                                {responseJson.map(currency =>
+                                    <div key={currency.code} className="m-2"><button onClick={() => setCurrency(currency.code, 1)} 
+                                    className="btn bg-white col-6" value={currency.code}>{currency.code}
+                                <p className="text-black-50">{currency.currency}</p></button></div>)}
+                        </div>
+                    </div>
+                </div>
+                <div id="setCurModal2" className="modal fade" role="dialog">
+                    <div className="modal-dialog modal-dialog-centered">
+
+                        <div className="modal-content bg-black">
+                                {responseJson.map(currency =>
+                                    <div key={currency.code} className="m-2"><button onClick={() => setCurrency(currency.code, 2)} 
+                                    className="btn bg-white col-6" value={currency.code}>{currency.code}
+                                <p className="text-black-50">{currency.currency}</p></button></div>)}
+                        </div>
+                    </div>
+                </div>
+            </>
+            , document.getElementById('currencyListModal'));
     })
     .catch((error) => {
         //no connection to api
@@ -29,5 +77,21 @@ fetch('http://192.168.1.173:8080/api/convert/all')
                 <h1 className="mx-auto mt-5">API is not responding</h1>
             </>
             , document.getElementById('currenciesList'));
+        console.log(error);
     });
 
+    function setCurrency(pressedCurrency, which){
+        if(which === 1){
+            $("#pickFstCur").text(pressedCurrency).val(pressedCurrency);
+            calculate();
+            $('#setCurModal1').modal('hide');
+        }
+        else{
+            $("#pickSndCur").text(pressedCurrency).val(pressedCurrency);
+            calculate();
+            $('#setCurModal2').modal('hide');
+        }
+
+        }
+
+export default () => calculate();
