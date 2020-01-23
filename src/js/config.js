@@ -1,1 +1,2 @@
-global.API_URL = 'http://192.168.1.173:8080/api/convert/';
+export const API_URL = 'https://currency-conventer.herokuapp.com';
+export const CONVERT_URL = API_URL + '/api/convert/'

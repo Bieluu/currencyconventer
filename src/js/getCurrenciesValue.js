@@ -1,12 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import {CONVERT_URL} from './config'
 
 function calculate(){
     let amount = $('#amount').val();
     let firstCurrency = $('#pickFstCur').val();
     let secondCurrency = $('#pickSndCur').val();
-    fetch(`http://192.168.1.173:8080/api/convert/${amount}/${firstCurrency}/${secondCurrency}`)
+    fetch(CONVERT_URL + `${amount}/${firstCurrency}/${secondCurrency}`)
     .then((response) => response.json())
     .then((responseJson) => {
         $("#result").val(responseJson.result);
@@ -22,7 +23,7 @@ function calculate(){
     });
 }
 
-fetch(`http://192.168.1.173:8080/api/convert/all`)
+fetch(CONVERT_URL + `all`)
     .then((response) => response.json())
     .then((responseJson) => {
         ReactDOM.render(
