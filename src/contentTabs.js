@@ -1,8 +1,21 @@
-import React from "react"
-
+import React from 'react';
+import Calculate from './js/getCurrenciesValue';
+import $ from 'jquery';
 export default () => {
-    return (
+    function switchCurrencies(){
+        let firstCurrency = $('#pickFstCur').val();
+        let secondCurrency = $('#pickSndCur').val();
 
+        let firstCurrencyCode = $('#pickFstCur').text();
+        let secondCurrencyCode = $('#pickSndCur').text();
+
+        $('#pickFstCur').val(secondCurrency);
+        $('#pickSndCur').val(firstCurrency);
+        
+        $('#pickFstCur').text(secondCurrencyCode);
+        $('#pickSndCur').text(firstCurrencyCode);
+    }
+    return (
         <div className="row mt-5">
             <div className="col-sm-12 text-center">
                 <div className="tab-content" id="pills-tabContent">
@@ -38,6 +51,12 @@ export default () => {
                                     </div>
                                 </div>
 
+                            </div>
+                            <div className="col-12">
+                                <button className="btn bg-black mt-5" onClick={() => {
+                                    switchCurrencies();
+                                    Calculate();
+                                    }}>Switch Currencies</button>
                             </div>
                             <div id="currencyListModal"></div>
                         </div>
