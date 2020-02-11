@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.js": "/currencyconventer/static/js/main.e9064e58.chunk.js",
-    "main.js.map": "/currencyconventer/static/js/main.e9064e58.chunk.js.map",
+    "main.js": "/currencyconventer/static/js/main.26bade50.chunk.js",
+    "main.js.map": "/currencyconventer/static/js/main.26bade50.chunk.js.map",
     "runtime-main.js": "/currencyconventer/static/js/runtime-main.07989bd5.js",
     "runtime-main.js.map": "/currencyconventer/static/js/runtime-main.07989bd5.js.map",
     "static/js/2.42842101.chunk.js": "/currencyconventer/static/js/2.42842101.chunk.js",
     "static/js/2.42842101.chunk.js.map": "/currencyconventer/static/js/2.42842101.chunk.js.map",
     "index.html": "/currencyconventer/index.html",
-    "precache-manifest.35798fea880347ad58d5cb4a52a11d36.js": "/currencyconventer/precache-manifest.35798fea880347ad58d5cb4a52a11d36.js",
+    "precache-manifest.0bf0c9ca9ba502e2f0794a6ebb6a3913.js": "/currencyconventer/precache-manifest.0bf0c9ca9ba502e2f0794a6ebb6a3913.js",
     "service-worker.js": "/currencyconventer/service-worker.js",
     "static/js/2.42842101.chunk.js.LICENSE": "/currencyconventer/static/js/2.42842101.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.07989bd5.js",
     "static/js/2.42842101.chunk.js",
-    "static/js/main.e9064e58.chunk.js"
+    "static/js/main.26bade50.chunk.js"
   ]
 }
