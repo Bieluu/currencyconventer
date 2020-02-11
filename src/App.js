@@ -49,7 +49,7 @@ const App = () => {
     (
         <>
             <ThemeProvider theme={theme}>
-                <Router>
+                <Router basename={process.env.PUBLIC_URL}>
                     <GlobalStyle />
                     <Container>
                         <Route path="/" component={() => <Calculate list={listOfCurriences} />} exact />
