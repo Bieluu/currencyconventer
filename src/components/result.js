@@ -9,7 +9,7 @@ const StyledDiv = styled.div`
 const Result = ( {firstCurrency, secondCurrency, amount, output}) => {
     return (
     <StyledDiv>
-        <p>{amount === '' ? 1 : amount} of {firstCurrency} is equal to</p>
+        <p>{amount === '' ? 1 : amount} {firstCurrency} is equal to</p>
         <h1>{output}</h1><h3> of {secondCurrency}</h3>
     </StyledDiv>
 )}
